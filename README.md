@@ -20,7 +20,7 @@ Los datos originales, junto con una explicación de cada columna, se pueden enco
 
 El conjunto de datos incluye cinco tablas que capturan evaluaciones de desempeño, datos demográficos de los empleados, niveles de satisfacción y calificaciones, distribuidos en más de 8,100 registros y 40 columnas.
 
-![HR Analytics](./picture/muestra_tabla_employe.png)
+![HR Analytics](./Picture/muestra_tabla_employe.png)
 
 ## Tareas (Task)
 
