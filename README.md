@@ -59,7 +59,28 @@ group by Department
 - analisis
 ### cosulta sql
 ```sql
-
+SELECT count(1) CTD_REGISTROS 
+        , count(CASE 
+                    WHEN Attrition ='Yes' Then EmployeeID
+                    -- else null 
+                    END ) CTD_REGISTROS_CPP -- ESTE ES EL MAS ROBUSTO
+        ,count_if(Attrition ='Yes' AND OverTime ='Yes') CTD_REGISTROS_CPP_2
+        ,(count_if(Attrition ='Yes' AND OverTime ='Yes')/count(1))*100 pct_atrition
+FROM bd_hr.default.employee
+;
 ```
 ![pregunta](./Picture/P1_DB.png)
+
+### Pregunta #4:**Horas Extras:** ¿Qué porcentaje de empleados que trabajan horas extras han dejado la empresa?
+- El 8% DEJO LA EMPRESA Y HACIA HORAS EXTRAS COMOVEMOS ESTE NUMERO NO ES SIGNIFICATIVO PARA CONTEPLARLO COMO PRINCIPAL CAUSA DE CESE .
+```sql
+SELECT count(1) CTD_REGISTROS 
+        , count(CASE 
+                    WHEN Attrition ='Yes' Then EmployeeID
+                    -- else null 
+                    END ) CTD_REGISTROS_CPP -- ESTE ES EL MAS ROBUSTO
+        ,count_if(Attrition ='Yes' AND OverTime ='Yes') CTD_REGISTROS_CPP_2
+        ,(count_if(Attrition ='Yes' AND OverTime ='Yes')/count(1))*100 pct_atrition
+FROM bd_hr.default.employee;
+```
 
