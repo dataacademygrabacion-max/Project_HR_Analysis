@@ -36,3 +36,30 @@ En este análisis, ayudo al departamento de RR.HH. a responder lo siguiente:
 8. **Distancia al Trabajo:** Categorizar a los empleados según su distancia al trabajo y mostrar el promedio de satisfacción laboral en cada categoría.
 9. **Promociones y Liderazgo:** ¿Existe una relación entre el número de ascensos y los años que un empleado ha pasado con su gerente actual?
 10. **Alerta de Rotación:** Para cada departamento, identificar el porcentaje de empleados que se han ido y que tenían una puntuación de satisfacción laboral inferior a 3.
+
+
+## Análisis Exploratorio de Datos (EDA) e Insights
+
+### Ejemplo
+### Pregunta #1: ¿Cuál es la antigüedad promedio de los empleados en cada departamento?
+
+### analisis
+Encontré la antigüedad promedio de cada departamento utilizando las funciones ROUND, AVG y GROUP BY. Dado que YearsAtCompany ya es un número entero, decidí mantener la antigüedad promedio también como un número entero (con dos decimales para precisión).
+### cosulta sql
+```sql
+select Department 
+    , ROUND(avg(YearsAtCompany),2) avg_antiguedad
+from bd_hr.default.employee
+group by Department
+```
+![pregunta](./Picture/P1_DB.png)
+
+### Pregunta #2: ¿Cuántos empleados en cada departamento siguen trabajando actualmente en la empresa?
+
+- analisis
+### cosulta sql
+```sql
+
+```
+![pregunta](./Picture/P1_DB.png)
+
